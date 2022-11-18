@@ -1,0 +1,10 @@
+<div class="container text-center">
+<h2>Lists</h2>
+  <div class="cards">
+    <% @lists.each do |list| %>
+    <div class="card-category">
+        <%=link_to  list.name, list %>
+    </div>
+    <% end %>
+  </div>
+</div>

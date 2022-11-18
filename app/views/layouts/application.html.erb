@@ -5,12 +5,30 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <font-awesome-icon icon="fa-solid fa-popcorn" />
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <font-awesome-icon icon="fa-solid fa-trash" />
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <div class="container-fluid">
+        <%= link_to lists_path,  class: "navbar-brand" do %>
+          <%= image_tag "https://cdn-icons-png.flaticon.com/512/3418/3418886.png" %>
+        <% end %>
+        <%= link_to "Create a new list", new_list_path %>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://wallpapercave.com/wp/wp6608539.jpg);">
+      <div class="container">
+        <h1>Save your movies</h1>
+        <p>your classics</p>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
